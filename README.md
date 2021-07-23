@@ -17,7 +17,7 @@ This package uses math/big in its heart and extends its usefulnell even into pos
 import (
 	"net"
 
-	"github.com/d-fal/bigint"
+	"github.com/pgcontrib/bigint"
 	"github.com/go-pg/pg/v10"
 	"github.com/go-pg/pg/v10/orm"
 )

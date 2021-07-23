@@ -1,4 +1,4 @@
-module github.com/d-fal/bigint
+module github.com/pgcontrib/bigint
 
 go 1.16
 

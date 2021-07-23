@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/d-fal/bigint"
+	"github.com/pgcontrib/bigint"
 )
 
 func TestAll(t *testing.T) {
