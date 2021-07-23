@@ -76,4 +76,18 @@ func TestAll(t *testing.T) {
 		assert.True(t, true, driver.IsValue(v))
 	})
 
+	t.Run("from-bigint", func(t *testing.T) {
+		x := bigint.NewBigint(a)
+		y := bigint.NewBigint(b)
+		d := x.FromBigInt(b)
+		// 100 * 200 = 20000
+		assert.Equal(t, y, d)
+	})
+	t.Run("scan", func(t *testing.T) {
+		x := bigint.NewBigint(a)
+		s, err := x.Value()
+		assert.NoError(t, err)
+		assert.NotEmpty(t, s)
+	})
+
 }

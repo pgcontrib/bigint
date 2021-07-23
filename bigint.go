@@ -28,8 +28,8 @@ func FromString(x string) (*Bigint, error) {
 	return NewBigint(b), nil
 }
 
-func (i *Bigint) Value() (driver.Value, error) {
-	return (*big.Int)(i).String(), nil
+func (b *Bigint) Value() (driver.Value, error) {
+	return (*big.Int)(b).String(), nil
 }
 
 func (b *Bigint) Scan(value interface{}) error {
@@ -47,42 +47,43 @@ func (b *Bigint) Scan(value interface{}) error {
 	return fmt.Errorf("Error converting type %T into Bigint", value)
 }
 
-func (i *Bigint) toBigInt() *big.Int {
-	return (*big.Int)(i)
+func (b *Bigint) toBigInt() *big.Int {
+	return (*big.Int)(b)
 }
 
-func (i *Bigint) Sub(x *Bigint) *Bigint {
-	return (*Bigint)(big.NewInt(0).Sub(i.toBigInt(), x.toBigInt()))
+func (b *Bigint) Sub(x *Bigint) *Bigint {
+	return (*Bigint)(big.NewInt(0).Sub(b.toBigInt(), x.toBigInt()))
 }
 
-func (i *Bigint) Add(x *Bigint) *Bigint {
-	return (*Bigint)(big.NewInt(0).Add(i.toBigInt(), x.toBigInt()))
+func (b *Bigint) Add(x *Bigint) *Bigint {
+	return (*Bigint)(big.NewInt(0).Add(b.toBigInt(), x.toBigInt()))
 }
 
-func (i *Bigint) Mul(x *Bigint) *Bigint {
-	return (*Bigint)(big.NewInt(0).Mul(i.toBigInt(), x.toBigInt()))
+func (b *Bigint) Mul(x *Bigint) *Bigint {
+	return (*Bigint)(big.NewInt(0).Mul(b.toBigInt(), x.toBigInt()))
 }
 
-func (i *Bigint) Div(x *Bigint) *Bigint {
-	return (*Bigint)(big.NewInt(0).Div(i.toBigInt(), x.toBigInt()))
+func (b *Bigint) Div(x *Bigint) *Bigint {
+	return (*Bigint)(big.NewInt(0).Div(b.toBigInt(), x.toBigInt()))
 }
 
-func (i *Bigint) Neg() *Bigint {
-	return (*Bigint)(big.NewInt(0).Neg(i.toBigInt()))
+func (b *Bigint) Neg() *Bigint {
+	return (*Bigint)(big.NewInt(0).Neg(b.toBigInt()))
 }
 
-func (i *Bigint) ToUInt64() uint64 {
-	return i.toBigInt().Uint64()
+func (b *Bigint) ToUInt64() uint64 {
+	return b.toBigInt().Uint64()
 }
 
-func (i *Bigint) ToInt64() int64 {
-	return i.toBigInt().Int64()
+func (b *Bigint) ToInt64() int64 {
+	return b.toBigInt().Int64()
 }
 
-func (i *Bigint) FromBigInt(x *big.Int) *Bigint {
+// same as NewBigint()
+func (b *Bigint) FromBigInt(x *big.Int) *Bigint {
 	return (*Bigint)(x)
 }
 
-func (i *Bigint) String() string {
-	return i.toBigInt().String()
+func (b *Bigint) String() string {
+	return b.toBigInt().String()
 }

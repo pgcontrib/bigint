@@ -54,3 +54,7 @@ func main() {
 
 
 ```
+
+# Support for [bun](https://github.com/uptrace/bun)
+
+**bun** will be the successor of **go-pg** and this package is under development to cover it as well.
