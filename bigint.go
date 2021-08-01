@@ -91,3 +91,7 @@ func (b *Bigint) String() string {
 func (b *Bigint) Cmp(target *Bigint) Cmp {
 	return &cmp{r: b.toBigInt().Cmp(target.toBigInt())}
 }
+
+func (b *Bigint) Abs() *Bigint {
+	return (*Bigint)(new(big.Int).Abs(b.toBigInt()))
+}

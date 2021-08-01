@@ -89,6 +89,11 @@ func TestAll(t *testing.T) {
 		assert.NoError(t, err)
 		assert.NotEmpty(t, s)
 	})
+	t.Run("Abs", func(t *testing.T) {
+		x := bigint.NewBigint(a)
+
+		assert.Equal(t, x.Neg().Abs(), x)
+	})
 	t.Run("compare: ", func(t *testing.T) {
 		x := bigint.NewBigint(a) // 100
 		y := bigint.NewBigint(b) // 200
