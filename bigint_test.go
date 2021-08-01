@@ -89,5 +89,27 @@ func TestAll(t *testing.T) {
 		assert.NoError(t, err)
 		assert.NotEmpty(t, s)
 	})
+	t.Run("compare: ", func(t *testing.T) {
+		x := bigint.NewBigint(a) // 100
+		y := bigint.NewBigint(b) // 200
+
+		cmp := x.Cmp(y)
+
+		t.Run("eq ?", func(t *testing.T) {
+			assert.Equal(t, cmp.Eq(), false)
+		})
+		t.Run("lt ?", func(t *testing.T) {
+			assert.Equal(t, cmp.Lt(), true)
+		})
+		t.Run("gt ?", func(t *testing.T) {
+			assert.Equal(t, cmp.Gt(), false)
+		})
+		t.Run("leq ?", func(t *testing.T) {
+			assert.Equal(t, cmp.Leq(), true)
+		})
+		t.Run("geq ?", func(t *testing.T) {
+			assert.Equal(t, cmp.Geq(), false)
+		})
+	})
 
 }

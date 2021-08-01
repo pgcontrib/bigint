@@ -87,3 +87,7 @@ func (b *Bigint) FromBigInt(x *big.Int) *Bigint {
 func (b *Bigint) String() string {
 	return b.toBigInt().String()
 }
+
+func (b *Bigint) Cmp(target *Bigint) Cmp {
+	return &cmp{r: b.toBigInt().Cmp(target.toBigInt())}
+}
