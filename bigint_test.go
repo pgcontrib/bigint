@@ -117,4 +117,11 @@ func TestAll(t *testing.T) {
 		})
 	})
 
+	t.Run("empty string ", func(t *testing.T) {
+
+		x, err := bigint.FromString("")
+		assert.Nil(t, err)
+		assert.Equal(t, x.ToInt64(), 0)
+	})
+
 }
