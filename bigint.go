@@ -19,7 +19,7 @@ func FromInt64(x int64) *Bigint {
 
 func FromString(x string) (*Bigint, error) {
 	if x == "" {
-		x = "0"
+		return FromInt64(0), nil
 	}
 	a := big.NewInt(0)
 	b, ok := a.SetString(x, 10)

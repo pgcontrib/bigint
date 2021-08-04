@@ -121,7 +121,7 @@ func TestAll(t *testing.T) {
 
 		x, err := bigint.FromString("")
 		assert.Nil(t, err)
-		assert.Equal(t, x.ToInt64(), 0)
+		assert.Equal(t, x.ToInt64(), int64(0))
 	})
 
 }
