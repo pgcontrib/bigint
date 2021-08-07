@@ -1,6 +1,6 @@
 # bigint [![Build Status](http://ci.100g.ir/api/badges/pgcontrib/bigint/status.svg)](http://ci.100g.ir/pgcontrib/bigint)
 
-bigint is a wrapper around math/big package to let us use big.int type in postgresql
+**bigint** is a wrapper around math/big package to let us use big.int type in postgresql
 
 In order to use big.Int structure into postgres database, one may thinks this is not straightforward and even painful.
 In this package, we are going to solve it.
