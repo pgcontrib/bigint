@@ -8,6 +8,7 @@ steps:
     commands:
       - go vet ./...
       - go test -v -coverprofile=coverage.txt -covermode=atomic ./...
+
   - name: coverage
     image: plugins/codecov
     settings:
