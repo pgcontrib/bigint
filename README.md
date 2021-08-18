@@ -1,4 +1,4 @@
-# bigint [![Build Status](http://ci.100g.ir/api/badges/pgcontrib/bigint/status.svg)](http://ci.100g.ir/pgcontrib/bigint) [![codecov](https://codecov.io/gh/pgcontrib/bigint/branch/main/graph/badge.svg?token=3ZRC78VRG7)](https://codecov.io/gh/pgcontrib/bigint)
+# bigint [![Build Status](http://ci.100g.ir/api/badges/pgcontrib/bigint/status.svg)](http://ci.100g.ir/pgcontrib/bigint) [![codecov](https://codecov.io/gh/pgcontrib/bigint/branch/main/graph/badge.svg?token=3ZRC78VRG7)](https://codecov.io/gh/pgcontrib/bigint) [![PkgGoDev](https://pkg.go.dev/badge/github.com/uptrace/bun)](https://pkg.go.dev/github.com/pgcontrib/bigint)
 
 **bigint** is a wrapper around math/big package to let us use big.int type in postgresql
 
